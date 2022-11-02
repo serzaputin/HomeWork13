@@ -4,8 +4,7 @@ public class Main {
         Author philipPullman = new Author("Phlip", "Pullman");
         Book firstBook = new Book("DarkMaterials", philipPullman, 2005);
         Book secondBook = new Book("Сat'sСradle", new Author("Kurt", "Vonnegut"), 1963);
-        firstBook.setPublishYaer(2015);
-        System.out.println(firstBook.getPublishYear());
+
 
         System.out.println("Authors:");
         Author philipPullman1 = new Author("Philip", "Pullman");

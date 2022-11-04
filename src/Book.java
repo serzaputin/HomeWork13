@@ -16,7 +16,7 @@ public class Book {
         this.pubLishYear = pubLishYear;
     }
 
-    @Override
+
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -24,17 +24,17 @@ public class Book {
         return pubLishYear == book.pubLishYear && Objects.equals(bookName, book.bookName) && Objects.equals(author, book.author);
     }
 
-    @Override
+
     public int hashCode() {
         return Objects.hash(bookName, author, pubLishYear);
     }
-    @Override
+
+
     public String toString() {
         return "Book{" +
                 "bookName='" +bookName + '\'' +
-                ", author=" + author +
+                ", author=" + author.toString() +
                 ", publishYear=" + pubLishYear +
                 '}';
     }
 }
-

@@ -16,11 +16,25 @@ public class Book {
         this.pubLishYear = pubLishYear;
     }
 
-    public void setPublishYaer(int i) {
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return pubLishYear == book.pubLishYear && Objects.equals(bookName, book.bookName) && Objects.equals(author, book.author);
     }
 
-    public boolean getPublishYear() {
-        return false;
+
+    public int hashCode() {
+        return Objects.hash(bookName, author, pubLishYear);
+    }
+
+
+    public String toString() {
+        return "Book{" +
+                "bookName='" +bookName + '\'' +
+                ", author=" + author.toString() +
+                ", publishYear=" + pubLishYear +
+                '}';
     }
 }
-
